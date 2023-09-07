@@ -1,5 +1,5 @@
+#include <stio.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 /**
  * main - Entry point of the program
@@ -13,14 +13,7 @@
  */
 int main(void)
 {
-	const char *m = "and that piece of art is useful - Dora Korpar, 2015-10-19\n";
-	ssize_t len = 59;  /* Length of the message excluding the null terminator */
-
-	if (write(STDERR_FILENO, m, len) != len)
-	{
-		return (1);  /* Error writing to stderr */
-	}
-
-	return (0);
+	write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
 
