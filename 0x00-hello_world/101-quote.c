@@ -16,7 +16,7 @@ int main(void)
 	const char *m = "and that piece of art is useful - Dora Korpar, 2015-10-19\n";
 	ssize_t len = 59;  /* Length of the message excluding the null terminator */
 
-	if (write(STDERR_FILENO, mm, len) != len)
+	if (write(STDERR_FILENO, m, len) != len)
 	{
 		return (1);  /* Error writing to stderr */
 	}
