@@ -3,7 +3,7 @@
 /**
  * main - Entry point of the program
  *
- * Description: This program prints Programming is like building a multilingual  * puzzle using puts and returns 0.
+ * Description: This program prints a specific message using puts and returns 0
  *
  * Return: Always 0 (success)
  */
