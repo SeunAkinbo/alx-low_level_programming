@@ -18,11 +18,14 @@ void times_table(void)
 			int mul;
 
 			mul = num_1 * num_2;
-			_putchar('0' + (mul / 10));
-			_putchar('0' + (mul % 10));
-			_putchar(',');
-			_putchar(' ');
+			if (num_2 == 0)
+				printf("%d, ", mul);
+			else if (num_2 != 9)
+				printf("%2d, ", mul);
+			else
+				printf("%2d", mul);
 		}
-		_putchar('\n');
+		printf("\n");
 	}
+	printf("\n");
 }
