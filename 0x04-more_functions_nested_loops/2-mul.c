@@ -7,12 +7,14 @@
  * @a: First Integer
  * @b: Second Integer
  *
- * Return: Always 0
+ * Return: Result
  **/
 
 int mul(int a, int b)
 {
-	printf("%d", a * b);
+	int result;
 
-	return (0);
+	result = a * b;
+
+	return (result);
 }
