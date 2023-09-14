@@ -7,7 +7,7 @@
  **/
 int main(void)
 {
-	unsigned long term1, term2, next;
+	unsigned long term1, term2;
 	unsigned long a, b, sum;
 	int i;
 
