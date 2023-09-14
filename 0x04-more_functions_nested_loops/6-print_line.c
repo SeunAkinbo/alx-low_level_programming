@@ -12,7 +12,10 @@
 void print_line(int n)
 {
 	if (n <= 0)
+	{
+		_putchar('$');
 		_putchar('\n');
+	}
 	else
 	{
 		while (n >= 0)
@@ -20,6 +23,7 @@ void print_line(int n)
 			_putchar('_');
 			n--;
 		}
+		_putchar('$');
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
