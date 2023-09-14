@@ -8,19 +8,22 @@
 
 int main(void)
 {
-	long long int first = 1, second = 2, next;
-	int count = 0;
+	unsigned long int term1, term2, next;
+	int i;
 
-	printf("%lld, %lld", first, second);
-	count = 2;
+	term1 = 1;
+	term2 = 2;
 
-	while (count < 50)
+	printf("%lu, ", term1);
+	for (i = 1; i < 50; i++)
 	{
-		next = first + second;
-		printf(", %lld", next);
-		first = second;
-		second = next;
-		count++;
+		printf("%lu", term2);
+		next = term1 + term2;
+		term1 = term2;
+		term2 = next;
+
+		if (i != 49)
+			printf(", ");
 	}
 	printf("\n");
 
