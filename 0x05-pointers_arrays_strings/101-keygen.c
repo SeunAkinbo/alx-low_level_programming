@@ -1,29 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
 
-#define PASSWORD_LENGTH 10
 
-char *generateRandomPassword(int length)
+/**
+ * main - Generates Random PAsswords
+ *
+ * Return: Always 0
+ **/
+
+int main(void)
 {
-	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	char *password = (char *)malloc((length + 1) * sizeof(char));
+	char password[84];
+	int index = 'a', sum = 0, diff_half1, diff_half2;
 
-	if (password == NULL)
+	srand(time(0));
+
+	while (sum < 2772)
 	{
-		perror("Memory allocation failed");
-		exit(EXIT_FAILURE);
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
 	}
 
-	srand(time(NULL));
-	for (int i = 0; i < length; i++)
+	password[index] = '\0';
+	if (sum != 2772)
 	{
-		int index = rand() % (strlen(charset));
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
 
-		password[i] = charset[index];
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
 	}
-
-	password[length] = '\0';
-	return (password);
+	printf("%s", password);
+	return (0);
 }
