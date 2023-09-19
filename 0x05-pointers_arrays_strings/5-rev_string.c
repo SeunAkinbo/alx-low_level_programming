@@ -16,7 +16,11 @@ void rev_string(char *s)
 
 	lenght = strlen(s);
 
-	for (counter = lenght - 1; counter >= 0; counter--)
-		printf("%c", s[counter]);
-	printf("\n");
+	for (counter = 0; counter < lenght / 2; counter++)
+	{
+		char rem = s[counter];
+
+		s[counter] = s[lenght - 1 - counter];
+		s[lenght - 1 - counter] = rem;
+	}
 }
