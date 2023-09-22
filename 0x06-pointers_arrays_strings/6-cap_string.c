@@ -1,62 +1,37 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdbool.h>
+#include <string.h>
 #include <ctype.h>
 
 /**
- * is_separator - Checks for separators
+ * cap_string - Capitalizes the words in a string
  *
- * @c: Seperator Character Argument
+ * @str: Seperator Character Argument
  *
- * Return: Boolean
- */
-
-
-bool is_separator(char c)
-{
-	/*Define the separators as specified*/
-	char separators[] = " \t\n,;.!?\"(){}";
-	int i;
-
-	for (i = 0; separators[i] != '\0'; i++)
-	{
-		if (c == separators[i])
-		{
-			return (true);
-		}
-	}
-	return (false);
-}
-
-
-/**
- * cap_string - Capitalize The words
- *
- * @str: String Argument
- *
- * Return:  String
+ * Return: String Value
  */
 
 char *cap_string(char *str)
 {
-	bool capitalize_next = true;
-	int i;
+	int i, j, len, slen;
+	char separator[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; str[i] != '\0'; i++)
+	len = strlen(separator);
+	slen = strlen(str);
+
+	for (i = 0; i < slen; i++)
 	{
-		if (is_separator(str[i]))
+		if (str[i] != '\0')
 		{
-			capitalize_next = true;
-		}
-		else if (capitalize_next)
-		{
-			str[i] = toupper(str[i]);
-			capitalize_next = false;
-		}
-		else
-		{
-			str[i] = tolower(str[i]);
+			for (j = 0; j < len; j++)
+			{
+				if (str[i] == separator[j])
+				{
+					if (islower(str[i + 1]))
+						str[i + 1] = toupper(str[i + 1]);
+				}
+			}
 		}
 	}
 	return (str);
 }
+
