@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 /**
- * is_seperator - Checkes for separators
+ * is_separator - Checks for separators
  *
  * @c: Seperator Character Argument
  *
