@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -10,18 +11,20 @@
 
 char *rot13(char *str)
 {
-	char *ptr = str;
+	int i, j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char dataRot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*ptr)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		char c = *ptr;
-
-		if (c >= 'a' && c <= 'z')
-			c = ((c - 'a' + 13) % 26) + 'a';
-		else if (c >= 'A' && c <= 'Z')
-			c = ((c - 'A' + 13) % 26) + 'A';
-		*ptr = c;
-		ptr++;
+		for (j = 0; j < 52; j++)
+		{
+			if (str[i] == data1[j])
+			{
+				str[i] = dataRot[j];
+				break;
+			}
+		}
 	}
 	return (str);
 }
