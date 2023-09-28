@@ -3,7 +3,7 @@
 /**
  * _strlen_recursion - Returns the Length of a String
  *
- * @s: String argument
+ * @s: String argument or parameter
  *
  * Return: Integer of the string length
  */
