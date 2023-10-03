@@ -11,14 +11,14 @@
 
 int main(void)
 {
-	char lowLetter = 'a';
+	char lowLetter = 'a';/*Variable declaration*/
 	char upLetter = 'A';
 
+	/*While loop declaration*/
 	while (lowLetter <= 'z')
 	{
 		putchar(lowLetter);
 		lowLetter++;
-
 	}
 
 	while (upLetter <= 'Z')
@@ -30,5 +30,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-
 }
