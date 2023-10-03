@@ -1,0 +1,277 @@
+!<arch>
+0-isupper.c/    0           0     0     644     104       `
+#include "main.h"
+
+/**
+ * _isupper - isupper
+ * @c: Int
+ * Return: Integer
+ */
+
+int _isupper(int c)
+{
+}
+0-memset.c/     0           0     0     644     161       `
+#include "main.h"
+
+/**
+ * _memset - Checks Memory
+ * @s: String
+ * @b: Char
+ * @n: Int
+ * Return: String
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+}
+
+0-strcat.c/     0           0     0     644     140       `
+#include "main.h"
+
+/**
+ * _strcat - strcat
+ * @dest: String
+ * @src: String
+ * Return: String
+ */
+
+char *_strcat(char *dest, char *src)
+{
+}
+100-atoi.c/     0           0     0     644     100       `
+#include "main.h"
+
+/**
+ * _atoi - atoi
+ * @s: String
+ * Return: Integer
+ */
+
+int _atoi(char *s)
+{
+}
+1-isdigit.c/    0           0     0     644     108       `
+#include "main.h"
+
+/**
+ * _isdigit - isdigit
+ * @c: Integer
+ * Return: Integer
+ */
+
+int _isdigit(int c)
+{
+}
+1-memcpy.c/     0           0     0     644     171       `
+#include "main.h"
+
+/**
+ * _memcpy - memcpy
+ * @dest: String
+ * @src: String
+ * @n: Integer
+ * Return: String
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+}
+
+1-strncat.c/    0           0     0     644     165       `
+#include "main.h"
+
+/**
+ * _strncat - strncat
+ * @dest: String
+ * @src: String
+ * @n: Integer
+ * Return: String
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+}
+
+2-strchr.c/     0           0     0     644     132       `
+#include "main.h"
+
+/**
+ * _strchr - strchr
+ * @s: String
+ * @c: Character
+ * Return: String
+ */
+
+char *_strchr(char *s, char c)
+{
+}
+2-strlen.c/     0           0     0     644     106       `
+#include "main.h"
+
+/**
+ * _strlen - strlen
+ * @s: String
+ * Return: Integer
+ */
+
+int _strlen(char *s)
+{
+}
+2-strncpy.c/    0           0     0     644     165       `
+#include "main.h"
+
+/**
+ * _strncpy - strncpy
+ * @dest: String
+ * @src: String
+ * @n: Integer
+ * Return: String
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+}
+
+3-islower.c/    0           0     0     644     108       `
+#include "main.h"
+
+/**
+ * _islower - islower
+ * @c: Integer
+ * Return: Integr
+ */
+
+
+int _islower(int c)
+{
+}
+3-puts.c/       0           0     0     644     131       `
+#include "main.h"
+#include <stdio.h>
+/**
+ * _puts - puts
+ * @s: String
+ * Return:A lways 0
+ */
+
+
+void _puts(char *s)
+{
+	puts(s);
+}
+
+3-strcmp.c/     0           0     0     644     133       `
+#include "main.h"
+
+/**
+ * _strcmp - strcmp
+ * @s1: String
+ * @s2: String
+ * Return: Integer
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+}
+
+3-strspn.c/     0           0     0     644     148       `
+#include "main.h"
+
+/**
+ * _strspn - strspn
+ * @s: String
+ * @accept: String
+ * Return: Integer
+ */
+
+unsigned int _strspn(char *s, char *accept)
+{
+}
+4-isalpha.c/    0           0     0     644     107       `
+#include "main.h"
+
+/**
+ * _isalpha - isalpha
+ * @c: Integer
+ * Return: Integr
+ */
+
+int _isalpha(int c)
+{
+}
+
+4-strpbrk.c/    0           0     0     644     143       `
+#include "main.h"
+
+/**
+ * _strpbrk - strpbrk
+ * @s: String
+ * @accept: String
+ * Return: String
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+}
+
+5-strstr.c/     0           0     0     644     154       `
+#include "main.h"
+
+/**
+ * _strstr - strstr
+ * @haystack: String
+ * @needle: String
+ * Return: String
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+}
+6-abs.c/        0           0     0     644     132       `
+#include "main.h"
+#include <stdlib.h>
+/**
+ * _abs - abs
+ * @n: Integr
+ * Return: Integer
+ */
+
+int _abs(int n)
+{
+	return (abs(n));
+}
+9-strcpy.c/     0           0     0     644     140       `
+#include "main.h"
+
+/**
+ * _strcpy - strcpy
+ * @dest: String
+ * @src: String
+ * Return: String
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+}
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
+_putchar.c/     0           0     0     644     111       `
+#include "main.h"
+
+/**
+ * _putchar - putchar
+ * @c: character
+ * Return: Integer
+ */
+
+int _putchar(char c)
+{
+}
+
