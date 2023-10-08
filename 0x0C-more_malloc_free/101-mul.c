@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+
 int multiply(char *num1, char *num2);
 
 int is_digit(char *str);
@@ -15,36 +15,25 @@ int is_digit(char *str);
  */
 int main(int argc, char *argv[])
 {
+
 	int result;
-	unsigned int i;
-	char result_string[12];
-	char *err = "Error";
 
 	if (argc != 3)
 	{
-		for (i = 0; i < 6; i++)
-			_putchar(err[i]);
-
-		_putchar('\n');
+		printf("Error\n");
 		return (98);
 	}
 
 	if (!is_digit(argv[1]) || !is_digit(argv[2]))
 	{
-		for (i = 0; i < 6; i++)
-			_putchar('E');
-
-		_putchar('\n');
+		printf("Error\n");
 		return (98);
 	}
 
 	result = multiply(argv[1], argv[2]);
-	sprintf(result_string, "%d", result);
 
-	for (i = 0; i < strlen(result_string); i++)
-		_putchar(result_string[i]);
+	printf("%d\n", result);
 
-	_putchar('\n');
 	return (0);
 }
 
