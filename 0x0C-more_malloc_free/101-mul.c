@@ -15,8 +15,7 @@ int is_digit(char *str);
  */
 int main(int argc, char *argv[])
 {
-
-	int result;
+	unsigned int result;
 
 	if (argc != 3)
 	{
@@ -74,5 +73,3 @@ int is_digit(char *str)
 	}
 	return (1);
 }
-
-
