@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 int multiply(char *num1, char *num2);
 
 int is_digit(char *str);
-
 
 /**
  * main - Entry point of the program.
@@ -36,7 +34,6 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
 
 /**
  * multiply - Multiplies two numbers.

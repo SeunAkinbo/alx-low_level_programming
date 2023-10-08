@@ -5,7 +5,7 @@
 /**
  * _putchar - Outputs character
  * @c: Character Argument
- * Return: Integer
+ * Return: Integer ascii value
  */
 
 int _putchar(char c)
