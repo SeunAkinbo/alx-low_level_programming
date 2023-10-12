@@ -7,7 +7,7 @@
  * Return: Void
  */
 
-void print_opcodes(int num_bytes);
+void print_opcodes(char *a, int num_bytes);
 
 /**
  * main - Prints opcodes of the main function
@@ -18,41 +18,43 @@ void print_opcodes(int num_bytes);
 
 int main(int argc, char *argv[])
 {
+	int num_bytes;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 
-	int num_bytes = atoi(argv[1]);
+	num_bytes = atoi(argv[1]);
 
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 
-	print_opcodes(num_bytes);
-
+	print_opcodes((char *)&main, num_bytes);
 	return (0);
 }
 
 /**
  * print_opcodes - Fetches opcode
+ * @a: String Argument
  * @num_bytes: Integer Argument
  * Return: Void
  */
 
-void print_opcodes(int num_bytes)
+void print_opcodes(char *a, int num_bytes)
 {
-	char *opcode_start = (char *)print_opcodes;
 	int i;
 
 	for (i = 0; i < num_bytes; ++i)
 	{
-		printf("%02hhx ", opcode_start[i]);
+		printf("%02hhx ", a[i]);
+		if (i < num_bytes - 1)
+			printf(" ");
 	}
-
 	printf("\n");
 }
 
