@@ -11,7 +11,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	    const listint_t *slow, *fast;
+	const listint_t *slow, *fast;
 	size_t count = 0;
 
 	slow = head;
