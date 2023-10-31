@@ -5,6 +5,7 @@
  * error_file - check if a file is opened and handles errors
  * @file_from: initial file to copy from and to check
  * @file_to: destination file to copy to
+ * @argv: Argument vector
  * Return: No return
  */
 
