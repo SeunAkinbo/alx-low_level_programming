@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
 	error_file(file_from, file_to, argv);
 
 	nchars = 1024;
+
 	while (nchars == 1024)
 	{
 		nchars = read(file_from, buf, 1024);
