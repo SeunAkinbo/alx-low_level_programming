@@ -1,12 +1,16 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts a new node at a given position
- * @h: head of the list
- * @idx: the index the node should be added to
- * @n: the value of temp->n
- * Return: the address of the new node, or NULL if it failed
- */
+ * insert_dnodeint_at_index - Inserts node at an index in a doubly linked list
+ * @h: The start of the linked list
+ * @idx: The index at which to insert new node
+ * @n: The value of the data to insert in the new node
+ * Return: Returns the updated linked list on success, or NULL otherwise
+ *
+ * Description: The function inserts a new node at an index and returns
+ *              updated list on success.
+ **/
+
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -31,10 +35,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 		i++;
 	}
-	newnode = (dlistint_t *)malloc(sizeof(dlistint_t));
+	newnode = create_node(n);
 	if (newnode == NULL)
 		return (NULL);
-	newnode->n = n;
 	newnode->prev = temp;
 	newnode->next = temp->next;
 	if (temp->next != NULL)
