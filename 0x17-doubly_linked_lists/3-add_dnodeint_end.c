@@ -11,7 +11,7 @@
  **/
 
 
-dlistint_t *create_node(const int n)
+dlistint_t *creates_node(const int n)
 {
 	dlistint_t *new;
 
@@ -39,7 +39,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new, *curr;
 
-	new = create_node(n);
+	new = creates_node(n);
 	if (!new)
 		return (NULL);
 
