@@ -8,7 +8,7 @@
  * Description: The function  creates a new node, assigns
  *		a value to the integer variable and returns
  *		the new node
- **/
+ **/ 
 
 
 dlistint_t *create_node(const int n)
@@ -25,7 +25,6 @@ dlistint_t *create_node(const int n)
 
 	return (new);
 }
-
 
 /**
  * add_dnodeint_end - Add a node to the end of a doubly linked list
