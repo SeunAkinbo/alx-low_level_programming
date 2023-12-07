@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * create_node - Creates a new node
+ * creates_node - Creates a new node
  * @n: The value of the node integer variable
  * Return: A new node on success or NULL otherwise
  *
