@@ -23,6 +23,6 @@ int sum_dlistint(dlistint_t *head)
 		total = total + curr->n;
 		curr = curr->next;
 	}
-	
+
 	return (total);
 }
