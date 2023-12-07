@@ -8,7 +8,7 @@
  * Description: The function  creates a new node, assigns
  *		a value to the integer variable and returns
  *		the new node
- **/ 
+ **/
 
 
 dlistint_t *create_node(const int n)
