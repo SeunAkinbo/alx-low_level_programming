@@ -1,54 +1,31 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
-
 /**
- * insert_dnodeint_at_index - Inserts node at an index in a doubly linked list
- * @h: The start of the linked list
- * @idx: The index at which to insert new node
- * @n: The value of the data to insert in the new node
- * Return: Returns the updated linked list on success, or NULL otherwise
+ * main - check the code
  *
- * Description: The function inserts a new node at an index and returns
- *		updated list on success.
- **/
-
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
 {
-	dlistint_t *curr, *new;
-	unsigned int i = 0;
+    dlistint_t *head;
 
-	new = create_node(n);
-	if (!new)
-		return (NULL);
-
-	if (!*h && idx != 0)
-	{
-		free(new);
-		return (NULL);
-	}
-
-	if (idx == 0)
-		new = add_dnodeint(h, n);
-
-	curr = *h;
-	while (curr && i < idx - 1)
-	{
-		curr = curr->next;
-		i++;
-	}
-
-	if (!curr)
-	{
-		new = add_dnodeint_end(h, n);
-		return (new);
-	}
-
-	new->prev = curr;
-	new->next = curr->next;
-
-	if (curr->next)
-		curr->next->prev = new;
-	curr->next = new;
-
-	return (new);
+    head = NULL;
+    add_dnodeint_end(&head, 0);
+    add_dnodeint_end(&head, 1);
+    add_dnodeint_end(&head, 2);
+    add_dnodeint_end(&head, 3);
+    add_dnodeint_end(&head, 4);
+    add_dnodeint_end(&head, 98);
+    add_dnodeint_end(&head, 402);
+    add_dnodeint_end(&head, 1024);
+    print_dlistint(head);
+    printf("-----------------\n");
+    insert_dnodeint_at_index(&head, 5, 4096);
+    print_dlistint(head);
+    free_dlistint(head);
+    head = NULL;
+    return (EXIT_SUCCESS);
 }
