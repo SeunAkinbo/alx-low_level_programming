@@ -61,7 +61,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(ht->array[i]->value);
 			strcpy(ht->array[i]->value, value);
-			return (1); } }
+			return (1);
+		}
+	}
 
 	node = create_node(key, value);
 	strcpy(node->key, key);
