@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned int i = 0;
 
 	/**Allocates memory to the hash table**/
-	hash_table = malloc(sizeof(hash_table_t));
+	hash_table = (hash_table_t *)malloc(sizeof(hash_table_t));
 	if (!hash_table)
 	{
 		free(hash_table);
@@ -21,7 +21,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	/**Allocates memory to the array**/
-	hash_table->array = malloc(sizeof(hash_node_t) * size);
+	hash_table->array = (hash_node_t **)calloc(size, sizeof(hash_node_t *));
 	if (!hash_table->array)
 	{
 		free(hash_table);
