@@ -23,12 +23,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!array)
 	{
 		fprintf(stderr, "Error: cannot malloc");
-                exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 
 	hash_table->size = size;
 	hash_table->array = &array;
 
-	free(array);
 	return (hash_table);
 }
