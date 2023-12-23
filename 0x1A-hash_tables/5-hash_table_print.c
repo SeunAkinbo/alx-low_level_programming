@@ -10,21 +10,21 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
 	unsigned long int idx;
-	int checker = 1;
+	int checker = 0;
 
-	if (!ht)
+	if (ht == NULL)
 		return;
 
 	printf("{");
 	for (idx = 0; idx < ht->size; idx++)
 	{
 		node = ht->array[idx];
-		while (node)
+		while (node != NULL)
 		{
-			if (!checker)
+			if (checker == 1)
 				printf(", ");
 			printf("\'%s\':\'%s\'", node->key, node->value);
-			checker = 0;
+			checker = 1;
 			node = node->next;
 		}
 	}
