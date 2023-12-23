@@ -7,8 +7,8 @@
  **/
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table = NULL;
 	unsigned int i = 0;
+	hash_table_t *table = NULL;
 
 	/**Allocates memory to the hash table**/
 	table = (hash_table_t *)malloc(sizeof(hash_table_t));
@@ -27,7 +27,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(table);
 		return (NULL);
 	}
-
 	/**Initializes the array and assigns NULL values to it**/
 	for (; i < size; i++)
 		table->array[i] = NULL;
