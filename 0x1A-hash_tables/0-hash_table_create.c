@@ -17,11 +17,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(table);
 		return (NULL);
 	}
-
 	table->size = size;
 	/**Allocates memory to the array**/
-	table->array =
-		(hash_node_t **)calloc(table->size, sizeof(hash_node_t *));
+	table->array = (hash_node_t **)calloc(table->size,
+			sizeof(hash_node_t *));
 	if (!table->array)
 	{
 		free(table);
