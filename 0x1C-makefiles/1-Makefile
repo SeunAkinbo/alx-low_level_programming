@@ -1,6 +1,5 @@
-SRC := $(wildcard *.c)
-CC := gcc
-CC := $(CC)
+SRC = $(wildcard *.c)
+CC = gcc
 
 all: $(SRC)
 	$(CC) $(SRC) -o school
