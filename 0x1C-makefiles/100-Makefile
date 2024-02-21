@@ -4,24 +4,22 @@ NAME = school
 OBJ = $(SRC:.c=.o)
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
+HEADER = m.h
 
 .PHONY: all clean oclean fclean re
 
-# Builds all executable
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(HEADER) clean $(NAME)
 
-# Deletes all Emacs and Vim temporary files along with the executable
+$(NAME): $(OBJ)
+
 clean:
 	$(RM) *~ $(NAME)
 
-# Deletes the object files
 oclean:
 	$(RM) $(OBJ)
 
-# Deletes all Emacs and Vim temporary files, 
-# the executable, and the object files
 fclean: clean oclean
 
-# Forces recompilation of all source files
-re: oclean all
+re: $(HEADER) oclean all
+
+.PHONY: clean oclean $(CC)
