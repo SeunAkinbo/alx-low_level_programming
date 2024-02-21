@@ -1,0 +1,4 @@
+EXE = gcc
+
+all: main.c school.c
+	$(EXE) main.c school.c -o school
