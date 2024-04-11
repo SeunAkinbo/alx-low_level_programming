@@ -9,9 +9,9 @@
  * Return: The index of the array if found; -1 otherwise
  **/
 
-int bin_search(int *array, size_t size, int value)
+int bin_search(int *array, size_t low, size_t size, int value)
 {
-        size_t left = 0, right = size - 1, i;
+        size_t left = low, right = size, i;
         size_t mid;
 
         if (!array || size == 0)
